@@ -13,6 +13,14 @@ namespace MeetAgainMVC.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
+            List<string> meetings = new List<string>();
+
+            meetings.Add("Maria");
+            meetings.Add("Karla");
+            meetings.Add("Sharon");
+
+            ViewBag.meetings = meetings;
+
             return View();
         }
     }
