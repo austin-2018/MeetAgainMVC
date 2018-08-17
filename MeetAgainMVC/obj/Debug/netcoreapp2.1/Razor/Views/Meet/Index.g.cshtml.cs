@@ -55,7 +55,7 @@ using MeetAgainMVC.Models;
             WriteLiteral("<h1>Meet</h1>\r\n<!-- <p><a href=\"/Meet/Add\">Add Information</a></p>  -->\r\n<!-- below is the way to hyperlink via ASP attibutes instead of sing a href above -->\r\n<p>");
             EndContext();
             BeginContext(172, 61, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "21ce39e5e71649cca93b8aaaa81109a5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "be8230ae93f54fa8aec7162d8cab4538", async() => {
                 BeginContext(214, 15, true);
                 WriteLiteral("Add Information");
                 EndContext();

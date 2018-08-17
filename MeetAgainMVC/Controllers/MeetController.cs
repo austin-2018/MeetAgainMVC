@@ -12,7 +12,9 @@ namespace MeetAgainMVC.Controllers
     {
         // GET: /<controller>/
 
-        static private List<string> Meetings = new List<string>();
+        //static private List<string> Meetings = new List<string>();
+        static private Dictionary<string, string> Meetings = new Dictionary<string, string>();
+        //Dictionary where first string will be last name, second will be description
 
         public IActionResult Index()
         {
@@ -33,11 +35,11 @@ namespace MeetAgainMVC.Controllers
         }
         [HttpPost]
         [Route("Meet/Add")]
-        public IActionResult NewLastName(string lastname)
+        public IActionResult NewLastName(string lastname, string description = "")
         {
             // Add new last name to existing last
 
-            Meetings.Add(lastname);
+            Meetings.Add(lastname, description);
             //return View();
             return Redirect("/Meet"); 
         }

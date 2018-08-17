@@ -58,7 +58,7 @@ using MeetAgainMVC.Models;
             WriteLiteral("<h1>Add Information</h1>\r\n");
             EndContext();
             BeginContext(156, 122, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "daeec896f269464eb113478bf6c436da", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "511e5259617f41919be0027a42c935cf", async() => {
                 BeginContext(177, 94, true);
                 WriteLiteral("\r\n    <input name=\"lastname\" type=\"text\" />\r\n    <input type=\"submit\" value=\"AddLastName\" />\r\n");
                 EndContext();
