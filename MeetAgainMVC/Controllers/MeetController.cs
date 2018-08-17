@@ -31,6 +31,8 @@ namespace MeetAgainMVC.Controllers
         {
             return View();
         }
+        [HttpPost]
+        [Route("Meet/Add")]
         public IActionResult NewLastName(string lastname)
         {
             // Add new last name to existing last
