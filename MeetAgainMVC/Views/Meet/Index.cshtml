@@ -7,6 +7,12 @@
 <p><a asp-controller="Meet" asp-action="Add">Add Information</a></p>
 <!-- Doing so increases the ease of refactoring -->
 
+@if (ViewBag.meetings.Count == 0)
+{
+    <p>No Names Yet!</p>
+ }
+
+
 <ul>
     @foreach(string meeting in ViewBag.meetings)
     {
