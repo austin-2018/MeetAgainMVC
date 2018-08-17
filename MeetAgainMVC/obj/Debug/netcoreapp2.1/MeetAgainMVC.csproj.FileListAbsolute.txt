@@ -31,3 +31,4 @@ C:\Users\Sharon\source\repos\MeetAgainMVC\MeetAgainMVC\obj\Debug\netcoreapp2.1\M
 C:\Users\Sharon\source\repos\MeetAgainMVC\MeetAgainMVC\obj\Debug\netcoreapp2.1\MeetAgainMVC.pdb
 C:\Users\Sharon\source\repos\MeetAgainMVC\MeetAgainMVC\obj\Debug\netcoreapp2.1\MeetAgainMVC.csproj.CopyComplete
 C:\Users\Sharon\source\repos\MeetAgainMVC\MeetAgainMVC\obj\Debug\netcoreapp2.1\Razor\Views\Meet\Index.g.cshtml.cs
+C:\Users\Sharon\source\repos\MeetAgainMVC\MeetAgainMVC\obj\Debug\netcoreapp2.1\Razor\Views\Meet\Add.g.cshtml.cs
