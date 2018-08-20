@@ -4,7 +4,7 @@
 <h1>Meet</h1>
 <!-- <p><a href="/Meet/Add">Add Information</a></p>  -->
 <!-- below is the way to hyperlink via ASP attibutes instead of sing a href above -->
-<p><a asp-controller="Meet" asp-action="Add">Add Information</a></p>
+<!-- <p><a asp-controller="Meet" asp-action="Add">Add Information</a></p>  -->
 <!-- Doing so increases the ease of refactoring -->
 
 @if (ViewBag.meetings.Count == 0)
@@ -20,11 +20,12 @@
         </tr>
 
         <ul>
-            @foreach (KeyValuePair<string, string> meeting in ViewBag.meetings)
+            <!-- var for Razor template -->
+            @foreach (var meeting in ViewBag.meetings)
             {
                 <tr>
-                    <td>@meeting.Key</td>
-                    <td>@meeting.Value</td>
+                    <td>@meeting.Thename</td>
+                    <td>@meeting.Description</td>
                 </tr>
             }
         </ul>

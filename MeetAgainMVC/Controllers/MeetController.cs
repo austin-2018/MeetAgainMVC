@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using MeetAgainMVC.Models;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -13,18 +14,13 @@ namespace MeetAgainMVC.Controllers
         // GET: /<controller>/
 
         //static private List<string> Meetings = new List<string>();
-        static private Dictionary<string, string> Meetings = new Dictionary<string, string>();
-        //Dictionary where first string will be last name, second will be description
+        //static private Dictionary<string, string> Meetings = new Dictionary<string, string>();
+        static private List<Meeting> Meetings = new List<Meeting>();
+       //Dictionary where first string will be last name, second will be description
 
         public IActionResult Index()
         {
-            // List<string> meetings = new List<string>(); replaced with static List above
 
-            //meetings.Add("Maria replaced with static List above
-            // meetings.Add("Karla"); replaced with static List above
-            //meetings.Add("Sharon"); replaced with static List above
-
-            // ViewBag.meetings = meetings; with static list must change from small case to upper case as it is no longer a local variable
             ViewBag.meetings = Meetings;
 
             return View();
@@ -37,9 +33,17 @@ namespace MeetAgainMVC.Controllers
         [Route("Meet/Add")]
         public IActionResult NewTheName(string thename, string description = "")
         {
-            // Add new last name to existing last
+            //Below uses default constructor in Meeting.cs
 
-            Meetings.Add(thename, description);
+            Meeting newMeeting = new Meeting
+            {
+                Description = description,
+                Thename = thename
+            };
+
+            Meetings.Add(newMeeting);
+
+            //Meetings.Add(new Meeting(thename, description));
             //return View();
             return Redirect("/Meet"); 
         }
