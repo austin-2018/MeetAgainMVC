@@ -12,12 +12,22 @@
     <p>No Names Yet!</p>
  }
 
+    <table class="table">
 
-<ul>
-    @foreach(KeyValuePair<string, string> meeting in ViewBag.meetings)
-    {
-        <li>@meeting.Key</li>
-        <li>@meeting.Value</li>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
 
-    }
-</ul>
+        <ul>
+            @foreach (KeyValuePair<string, string> meeting in ViewBag.meetings)
+            {
+                <tr>
+                    <td>@meeting.Key</td>
+                    <td>@meeting.Value</td>
+                </tr>
+            }
+        </ul>
+    </table>
+
+<p><a asp-controller="Meet" asp-action="Add">Add a Meeting Place</a></p>
