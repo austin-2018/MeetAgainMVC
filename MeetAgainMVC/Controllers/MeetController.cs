@@ -35,11 +35,11 @@ namespace MeetAgainMVC.Controllers
         }
         [HttpPost]
         [Route("Meet/Add")]
-        public IActionResult NewLastName(string lastname, string description = "")
+        public IActionResult NewTheName(string thename, string description = "")
         {
             // Add new last name to existing last
 
-            Meetings.Add(lastname, description);
+            Meetings.Add(thename, description);
             //return View();
             return Redirect("/Meet"); 
         }

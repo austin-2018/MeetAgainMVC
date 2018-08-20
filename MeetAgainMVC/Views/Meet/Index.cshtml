@@ -14,7 +14,7 @@
 
 
 <ul>
-    @foreach(string meeting in ViewBag.meetings)
+    @foreach(KeyValuePair<string, string> meeting in ViewBag.meetings)
     {
         <li>@meeting</li>
 
