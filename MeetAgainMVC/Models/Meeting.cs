@@ -9,13 +9,14 @@ namespace MeetAgainMVC.Models
     {
         public string Thename { get; set; }
         public string Description { get; set; }
+        public int MeetingId { get; set; }
+        private static int nextId = 1;
 
-        public Meeting(string thename, string description)//constructor
-        {
-            Thename = thename;
-            Description = description;
+
+        public Meeting()
+        {//still the default constructor ensures each Meeting object has a unique ID
+            MeetingId = nextId;
+            nextId++;
         }
-
-        public Meeting() { }//default constructor
     }
 }

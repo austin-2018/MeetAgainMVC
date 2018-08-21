@@ -48,5 +48,22 @@ namespace MeetAgainMVC.Controllers
             return Redirect("/Meet"); 
         }
 
+        public IActionResult Remove ()
+        {//to display the remove Meeting Place form
+            ViewBag.title = "Remove Meeting";
+            ViewBag.meetings = Meetings;
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Remove(int[] meetingIds)
+        {
+            //TODO remove all meetings from the list
+            foreach (int meetingId in meetingIds)
+            {
+                Meetings.RemoveAll(x => x.MeetingId == meetingId);
+            }
+            //redirect to Home page
+            return Redirect("/");
+        }
     }
 }
